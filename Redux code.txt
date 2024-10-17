@@ -1,0 +1,15 @@
+const BagSlice = createSlice({
+  name:"bag",
+  initialState: [],
+  reducers:{
+    addToBag: (state,action)=>{
+     let check = state.find((i)=>i.id === action.payload.id)
+      if(!check){
+        action.payload.count++
+        return [...state,action.payload]
+      }else if (check){
+       return state.map((i) => i.id ===action.payload.id ? { ...i, count: i.count + 1 }:i)
+      }
+    },
+  }
+})
