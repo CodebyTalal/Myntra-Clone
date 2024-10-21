@@ -45,6 +45,14 @@ const itemsSlice = createSlice({
      return action.payload;
   },
 }})
+const categoryItemsSlice = createSlice({
+  name:"categoryItems",
+  initialState: "",
+  reducers:{
+    setCategory: (state,action)=>{
+      localStorage.setItem("Category",action.payload)
+  },
+}})
 const hoverSlice = createSlice({
   name:"hover",
   initialState: false,
@@ -72,7 +80,7 @@ const fetchStatusSlice = createSlice({
 
 
 
-const ItemsStore = configureStore({reducer:{bag:BagSlice.reducer,summary:summarySlice.reducer,items:itemsSlice.reducer,fetchStatus:fetchStatusSlice.reducer,wishlist: WishlistSlice.reducer,hover:hoverSlice.reducer}})
+const ItemsStore = configureStore({reducer:{bag:BagSlice.reducer,summary:summarySlice.reducer,items:itemsSlice.reducer,fetchStatus:fetchStatusSlice.reducer,wishlist: WishlistSlice.reducer,hover:hoverSlice.reducer,categoryItems:categoryItemsSlice.reducer}})
 
 export default ItemsStore;
 export const BagAction = BagSlice.actions;
@@ -81,3 +89,4 @@ export const itemsAction = itemsSlice.actions;
 export const fetchStatusAction = fetchStatusSlice.actions;
 export const wishlistAction = WishlistSlice.actions;
 export const hoverAction = hoverSlice.actions;
+export const categoryItemsAction = categoryItemsSlice.actions;

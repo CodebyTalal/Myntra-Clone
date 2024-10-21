@@ -74,11 +74,21 @@ border-color: #000000 !important;
 display: none;
 }
 
-.dropdown:hover>.dropdown-menu {
+.form-check-input:checked {
+  background-color: #f54e77;
+  border-color: #f54e77;
+  box-shadow: none;
+}
+.form-check-input:focus {
+  border: 1px solid rgba(155, 155, 155, 0.274);
+  box-shadow: none;
+}
+
+.header_dropdown:hover>.dropdown-menu {
   display: block;
 }
 
-.dropdown>.dropdown-toggle:active {
+.header_dropdown>.dropdown-toggle:active {
   /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
@@ -103,7 +113,7 @@ display: none;
   padding: 28px 20px 28px 20px;
   border-bottom: 3px solid #ffffff59;
 }
-.dropdown:hover , .nav_bar a:hover {
+.header_dropdown:hover , .nav_bar a:hover {
   border-bottom: 3px solid #f54e77;
 }
 
@@ -162,7 +172,7 @@ margin-top: 2px;
   align-items: center;
 }
 
-.dropdown{
+.header_dropdown{
   height: 77px;
 }
 
@@ -260,7 +270,7 @@ margin-top: 2px;
 
 .item-container:hover {
   background-color: white;
- filter: drop-shadow(1px 6px 12px rgba(128, 128, 128, 0.205));
+ filter: drop-shadow(1px 1px 12px rgba(128, 128, 128, 0.247));
 }
 .wishlist-item-container {
   width: 250px;
@@ -295,7 +305,10 @@ margin-top: 2px;
 } 
 
 .fs-7{
-  font-size: 15px !important;
+  font-size: 16px !important;
+}
+.fs-8{
+  font-size: 14px !important;
 }
 
 .Sizes{

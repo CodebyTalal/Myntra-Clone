@@ -5,12 +5,11 @@ import Bag from "./components/Bag.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Home from "./components/Home.jsx";
-import { displayBagAction } from "./components/Header.jsx";
 import { Provider } from "react-redux";
 import ItemsStore from "./store/redux.js";
-import FetchStatus from "./components/FetchStatus.jsx";
 import Wishlist from "./components/Wishlist.jsx";
 import LoginPage from "./components/LoginPage.jsx";
+import CategoryItems from "./components/CategoryItems.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "/wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: "/categoryitem",
+        element: <CategoryItems />,
       },
     ],
   },

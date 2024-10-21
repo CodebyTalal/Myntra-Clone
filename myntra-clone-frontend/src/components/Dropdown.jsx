@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Dropdown = () => {
   return (
-    <div class="dropdown px-2">
+    <div class="dropdown header_dropdown px-2">
       <a
         class="dropdown-toggle action_container text-dark pt-3"
         type="button"
