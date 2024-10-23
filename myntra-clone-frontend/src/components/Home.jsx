@@ -1,19 +1,30 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Item from "./Item";
-import HomePage from "./HomePage";
+import { useEffect } from "react";
+import { filteredItemsAction } from "../store/redux";
 const Home = () => {
+  const dispatch = useDispatch();
   const items = useSelector((store) => store.items);
-  console.log(items);
-
+  const check = useSelector((store) => store.check);
+  const filteredItems = useSelector((store) => store.filteredItems);
+  useEffect(() => {
+    items.filter((item) => {
+      if (check.includes(item.company) && !filteredItems.includes(item)) {
+        dispatch(filteredItemsAction.addfilteredItems(item));
+      } else if (
+        !check.includes(item.company) &&
+        filteredItems.includes(item)
+      ) {
+        dispatch(filteredItemsAction.removefilteredItems(item));
+      }
+    });
+  }, [check]);
   return (
-    <main>
-      <HomePage />
-      <div className="items-container mt-5 pt-5">
-        {items.map((item) => (
-          <Item key={item.id} item={item}></Item>
-        ))}
-      </div>
-    </main>
+    <div className="items-container w-80 mx-0 px-0 mt-0">
+      {check.length === 0
+        ? items.map((item) => <Item key={item.id} item={item}></Item>)
+        : filteredItems.map((item) => <Item key={item.id} item={item}></Item>)}
+    </div>
   );
 };
 

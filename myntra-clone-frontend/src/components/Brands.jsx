@@ -1,6 +1,21 @@
 import { IoIosSearch } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import { checkAction } from "../store/redux";
+import { useEffect } from "react";
 
 const Brands = () => {
+  const dispatch = useDispatch();
+
+  const handleCheckbox = (event) => {
+    const label = event.target.getAttribute("data-label");
+    console.log(event);
+    if (event.target.checked) {
+      dispatch(checkAction.setCheck(label));
+    } else if (event.target.checked === false) {
+      dispatch(checkAction.removeCheck(label));
+    }
+  };
+
   return (
     <div className="px-4">
       <div className="d-flex justify-content-between align-items-center">
@@ -17,6 +32,8 @@ const Brands = () => {
           class="form-check-input"
           type="checkbox"
           value=""
+          data-label="Carlton London"
+          onChange={handleCheckbox}
           id="defaultCheck1"
         />
         <label class="form-check-label fs-8" for="defaultCheck1">
@@ -29,6 +46,8 @@ const Brands = () => {
           type="checkbox"
           value=""
           id="defaultCheck2"
+          data-label="The Indian Garage Co"
+          onChange={handleCheckbox}
         />
         <label class="form-check-label fs-8" for="defaultCheck2">
           The Indian Garage Co
@@ -40,6 +59,8 @@ const Brands = () => {
           type="checkbox"
           value=""
           id="defaultCheck3"
+          data-label="NUEVOSDAMAS"
+          onChange={handleCheckbox}
         />
         <label class="form-check-label fs-8" for="defaultCheck3">
           NUEVOSDAMAS
@@ -51,6 +72,8 @@ const Brands = () => {
           type="checkbox"
           value=""
           id="defaultCheck4"
+          data-label="ADIDAS"
+          onChange={handleCheckbox}
         />
         <label class="form-check-label fs-8" for="defaultCheck4">
           ADIDAS
@@ -62,6 +85,8 @@ const Brands = () => {
           type="checkbox"
           value=""
           id="defaultCheck5"
+          data-label="Roadster"
+          onChange={handleCheckbox}
         />
         <label class="form-check-label fs-8" for="defaultCheck5">
           Roadster
@@ -73,6 +98,8 @@ const Brands = () => {
           type="checkbox"
           value=""
           id="defaultCheck6"
+          data-label="Nike"
+          onChange={handleCheckbox}
         />
         <label class="form-check-label fs-8" for="defaultCheck6">
           Nike
@@ -84,6 +111,8 @@ const Brands = () => {
           type="checkbox"
           value=""
           id="defaultCheck6"
+          data-label="Nivea"
+          onChange={handleCheckbox}
         />
         <label class="form-check-label fs-8 " for="defaultCheck6">
           Nivea

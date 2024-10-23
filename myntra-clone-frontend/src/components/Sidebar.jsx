@@ -6,22 +6,21 @@ import SidebarHeader from "./SidebarHeader";
 
 const Sidebar = () => {
   return (
-    <div className="position-sticky">
+    <>
       <SidebarHeader />
       <hr className="my-0" />
-      <div
-        class="d-flex flex-column flex-shrink-0 border border-bottom-0 border-start-0 border-top-0"
-        style={{ width: "280px" }}
-      >
-        <Radios />
-        <hr />
-        <Categories />
-        <hr />
-        <Brands />
-        <hr />
-        <Discounts />
+      <div className="position-sticky pe-0" style={{ width: "250px" }}>
+        <div class="d-flex flex-column flex-shrink-0 border border-bottom-0 border-start-0 border-top-0">
+          <Radios />
+          <hr />
+          <Categories />
+          <hr />
+          <Brands />
+          <hr />
+          <Discounts />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

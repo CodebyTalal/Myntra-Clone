@@ -4,19 +4,19 @@ import App from "./App.jsx";
 import Bag from "./components/Bag.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Home from "./components/Home.jsx";
 import { Provider } from "react-redux";
 import ItemsStore from "./store/redux.js";
 import Wishlist from "./components/Wishlist.jsx";
 import LoginPage from "./components/LoginPage.jsx";
 import CategoryItems from "./components/CategoryItems.jsx";
+import HomePage from "./components/HomePage.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/", element: <HomePage /> },
       {
         path: "/bag",
         element: <Bag />,

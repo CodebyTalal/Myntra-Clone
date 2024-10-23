@@ -45,12 +45,39 @@ const itemsSlice = createSlice({
      return action.payload;
   },
 }})
+const filteredItemsSlice = createSlice({
+  name:"filteredItems",
+  initialState: [],
+  reducers:{
+    addfilteredItems: (state,action)=>{
+     return [...state, action.payload];
+  },
+    removefilteredItems: (state,action)=>{
+      return state.filter(i => {if(i.id !== action.payload.id){
+        return i
+      }})
+  },
+}})
 const categoryItemsSlice = createSlice({
   name:"categoryItems",
   initialState: "",
   reducers:{
     setCategory: (state,action)=>{
       localStorage.setItem("Category",action.payload)
+  },
+}})
+const checkSlice = createSlice({
+  name:"check",
+  initialState: [],
+  reducers:{
+    setCheck: (state,action)=>{
+      if(!state.includes(action.payload)){
+        state.push(action.payload)
+      }
+  },
+  removeCheck: (state,action)=>{
+      let newState = state.filter(i=>i!==action.payload)
+      return newState
   },
 }})
 const hoverSlice = createSlice({
@@ -80,7 +107,7 @@ const fetchStatusSlice = createSlice({
 
 
 
-const ItemsStore = configureStore({reducer:{bag:BagSlice.reducer,summary:summarySlice.reducer,items:itemsSlice.reducer,fetchStatus:fetchStatusSlice.reducer,wishlist: WishlistSlice.reducer,hover:hoverSlice.reducer,categoryItems:categoryItemsSlice.reducer}})
+const ItemsStore = configureStore({reducer:{bag:BagSlice.reducer,summary:summarySlice.reducer,items:itemsSlice.reducer,fetchStatus:fetchStatusSlice.reducer,wishlist: WishlistSlice.reducer,hover:hoverSlice.reducer,categoryItems:categoryItemsSlice.reducer,check:checkSlice.reducer,filteredItems:filteredItemsSlice.reducer}})
 
 export default ItemsStore;
 export const BagAction = BagSlice.actions;
@@ -90,3 +117,5 @@ export const fetchStatusAction = fetchStatusSlice.actions;
 export const wishlistAction = WishlistSlice.actions;
 export const hoverAction = hoverSlice.actions;
 export const categoryItemsAction = categoryItemsSlice.actions;
+export const checkAction = checkSlice.actions;
+export const filteredItemsAction = filteredItemsSlice.actions;
