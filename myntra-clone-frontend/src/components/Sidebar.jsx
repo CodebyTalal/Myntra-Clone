@@ -13,11 +13,11 @@ const Sidebar = () => {
         <div class="d-flex flex-column flex-shrink-0 border border-bottom-0 border-start-0 border-top-0">
           <Radios />
           <hr />
-          <Categories />
-          <hr />
           <Brands />
           <hr />
           <Discounts />
+          <hr />
+          <Categories />
         </div>
       </div>
     </>

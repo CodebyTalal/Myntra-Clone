@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { CiHeart } from "react-icons/ci";
 import { wishlistAction } from "../store/redux";
 import { useState } from "react";
@@ -8,7 +8,6 @@ const Item = ({ item }) => {
     dispatch(wishlistAction.addToWishlist(item));
   };
   const [hoverTrue, setHoverTrue] = useState(false);
-  console.log(hoverTrue);
 
   const handleHover = () => {
     setHoverTrue((currentstate) => {

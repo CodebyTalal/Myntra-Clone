@@ -1,14 +1,12 @@
 import { IoIosSearch } from "react-icons/io";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { checkAction } from "../store/redux";
-import { useEffect } from "react";
 
 const Brands = () => {
   const dispatch = useDispatch();
 
   const handleCheckbox = (event) => {
     const label = event.target.getAttribute("data-label");
-    console.log(event);
     if (event.target.checked) {
       dispatch(checkAction.setCheck(label));
     } else if (event.target.checked === false) {

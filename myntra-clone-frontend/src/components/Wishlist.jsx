@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import Item from "./Item";
 import WishlistItem from "./WishlistItem";
 import WishlistEmptyMessage from "./WishlistEmptyMessage";
 

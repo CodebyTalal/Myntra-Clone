@@ -1,5 +1,4 @@
 import { CiSearch } from "react-icons/ci";
-import { IoPersonOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { BsHandbag } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";

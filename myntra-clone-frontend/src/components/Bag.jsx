@@ -1,14 +1,11 @@
 import { useSelector } from "react-redux";
-import Item from "./Item";
 import BagSummary from "./Bag_Summary";
-import items from "../data/items";
 import BagItem from "./BagItem";
 import BagEmptyMessage from "./BagEmptyMessage";
 
 const Bag = () => {
   const Bag = useSelector((store) => store.bag);
   const summaryData = useSelector((store) => store.summary);
-  console.log(summaryData);
 
   return (
     <main className="mt-5 pt-5">

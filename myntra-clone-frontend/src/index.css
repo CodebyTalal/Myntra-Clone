@@ -294,6 +294,10 @@ margin-top: 2px;
   border: 1px solid gray;
 }
 
+.text_pink{
+  color:#ff3f6ce3 ;
+}
+
 .w-80{
   width: 80% !important;
 }

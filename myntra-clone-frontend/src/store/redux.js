@@ -45,19 +45,22 @@ const itemsSlice = createSlice({
      return action.payload;
   },
 }})
-const filteredItemsSlice = createSlice({
-  name:"filteredItems",
-  initialState: [],
+const discountSlice = createSlice({
+  name:"discount",
+  initialState: 0,
   reducers:{
-    addfilteredItems: (state,action)=>{
-     return [...state, action.payload];
-  },
-    removefilteredItems: (state,action)=>{
-      return state.filter(i => {if(i.id !== action.payload.id){
-        return i
-      }})
+    setDiscount: (state,action)=>{
+     return action.payload;
   },
 }})
+
+const filteredItemsSlice = createSlice({
+  name: "filteredItems",
+  initialState: [],
+  reducers: {
+    setFilteredItems: (state, action) => action.payload
+  },
+});
 const categoryItemsSlice = createSlice({
   name:"categoryItems",
   initialState: "",
@@ -107,7 +110,7 @@ const fetchStatusSlice = createSlice({
 
 
 
-const ItemsStore = configureStore({reducer:{bag:BagSlice.reducer,summary:summarySlice.reducer,items:itemsSlice.reducer,fetchStatus:fetchStatusSlice.reducer,wishlist: WishlistSlice.reducer,hover:hoverSlice.reducer,categoryItems:categoryItemsSlice.reducer,check:checkSlice.reducer,filteredItems:filteredItemsSlice.reducer}})
+const ItemsStore = configureStore({reducer:{bag:BagSlice.reducer,summary:summarySlice.reducer,items:itemsSlice.reducer,fetchStatus:fetchStatusSlice.reducer,wishlist: WishlistSlice.reducer,hover:hoverSlice.reducer,categoryItems:categoryItemsSlice.reducer,check:checkSlice.reducer,filteredItems:filteredItemsSlice.reducer,discount:discountSlice.reducer}})
 
 export default ItemsStore;
 export const BagAction = BagSlice.actions;
@@ -119,3 +122,4 @@ export const hoverAction = hoverSlice.actions;
 export const categoryItemsAction = categoryItemsSlice.actions;
 export const checkAction = checkSlice.actions;
 export const filteredItemsAction = filteredItemsSlice.actions;
+export const discountAction = discountSlice.actions;
