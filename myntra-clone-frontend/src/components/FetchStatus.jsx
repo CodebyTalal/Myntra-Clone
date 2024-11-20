@@ -16,10 +16,11 @@ const FetchStatus = () => {
         dispatch(fetchStatusAction.fetchStarted());
         const response = await fetch("http://localhost:8080/items", { signal });
         const { items } = await response.json();
+        console.log("callled");
 
-        if (items?.length) {
-          dispatch(itemsAction.addInitialItems(items[0]));
-        }
+        // if (items?.length) {
+        dispatch(itemsAction.addInitialItems(items));
+        // }
         dispatch(fetchStatusAction.fetchFinished());
         dispatch(fetchStatusAction.markFetched());
       } catch (error) {
@@ -32,7 +33,7 @@ const FetchStatus = () => {
     fetchData();
 
     return () => controller.abort();
-  }, [dispatch, FetchStatus.fetched]);
+  }, [FetchStatus.fetched, dispatch]);
 };
 
 export default FetchStatus;

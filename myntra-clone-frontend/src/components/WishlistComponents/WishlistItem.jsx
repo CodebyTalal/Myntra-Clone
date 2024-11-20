@@ -1,8 +1,14 @@
-import { useDispatch } from "react-redux";
-import { BagAction, summaryAction, wishlistAction } from "../store/redux";
+import { useDispatch, useSelector } from "react-redux";
+import { BagAction, summaryAction, wishlistAction } from "../../store/redux";
 import { IoClose } from "react-icons/io5";
 
 const WishlistItem = ({ item }) => {
+  // const bagitems = useSelector((store) => store.bag);
+  // const check = bagitems.forEach((i) => {
+  //   return true && i.id === item.id;
+  // });
+  // console.log(check);
+
   const dispatch = useDispatch();
   const handleAddtoBag = () => {
     dispatch(BagAction.addToBag(item));
@@ -39,7 +45,15 @@ const WishlistItem = ({ item }) => {
           <span className="discount">({item.discount_percentage}% OFF)</span>
         </div>
 
-        <button className="btn-add-bag" onClick={handleAddtoBag}>
+        <button
+          className="btn-add-bag"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+          onClick={() => {
+            handleAddtoBag();
+            handleRemovefromWishlist();
+          }}
+        >
           Add to Bag
         </button>
       </div>

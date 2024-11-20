@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { discountAction } from "../store/redux";
+import { discountAction } from "../../store/redux";
 
 const Discounts = () => {
   const dispatch = useDispatch();
@@ -11,9 +11,9 @@ const Discounts = () => {
   return (
     <div className=" ps-4">
       <strong>DISCOUNT RANGE</strong>{" "}
-      <div class="form-check mt-2">
+      <div className="form-check mt-2">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios1"
@@ -21,13 +21,13 @@ const Discounts = () => {
           data-label="10"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios1">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios1">
           10% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios2"
@@ -35,13 +35,13 @@ const Discounts = () => {
           data-label="20"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios2">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios2">
           20% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios3"
@@ -49,13 +49,13 @@ const Discounts = () => {
           data-label="30"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios3">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios3">
           30% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios4"
@@ -63,13 +63,13 @@ const Discounts = () => {
           data-label="40"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios4">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios4">
           40% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios5"
@@ -77,13 +77,13 @@ const Discounts = () => {
           data-label="50"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios5">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios5">
           50% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios6"
@@ -91,13 +91,13 @@ const Discounts = () => {
           data-label="60"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios6">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios6">
           60% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios7"
@@ -105,13 +105,13 @@ const Discounts = () => {
           data-label="70"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios7">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios7">
           70% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios8"
@@ -119,13 +119,13 @@ const Discounts = () => {
           data-label="80"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios8">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios8">
           80% and above
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios9"
@@ -133,7 +133,7 @@ const Discounts = () => {
           data-label="90"
           onChange={handleDiscounts}
         />
-        <label class="form-check-label fs-8" for="exampleRadios9">
+        <label className="form-check-label fs-8" htmlFor="exampleRadios9">
           90% and above
         </label>
       </div>

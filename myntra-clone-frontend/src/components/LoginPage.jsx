@@ -10,12 +10,12 @@ const LoginPage = () => {
       <main className="d-flex justify-content-center bg_pink mt-5 pt-4 min-vh-100">
         <div className="form-signin mt-5 ">
           <img src={loginImage} alt="" className="w-100" />
-          <form class="p-5">
-            <h4 class="mb-4 fs-5">
+          <form className="p-5">
+            <h4 className="mb-4 fs-5">
               <strong>Login</strong> <small>or</small> <strong>Signup</strong>
             </h4>
 
-            <div class="border login_input p-2 mb-3 d-flex  align-items-center">
+            <div className="border login_input p-2 mb-3 d-flex  align-items-center">
               <small
                 className={`${
                   placeholder === "" ? "text-dark" : "text-secondary"
@@ -25,7 +25,7 @@ const LoginPage = () => {
               </small>
               <input
                 type="text"
-                class="w-75 float-end floatingInput"
+                className="w-75 float-end floatingInput"
                 placeholder={placeholder}
                 onFocus={() => setPlaceholder("")}
                 onBlur={() => setPlaceholder("Mobile Number*")}
@@ -36,8 +36,8 @@ const LoginPage = () => {
               <a className="text-pink fw-bold me-1">Terms of Use</a>&{" "}
               <a className="text-pink fw-bold">Privacy Policy</a>
             </p>
-            <button class="btn-place-order">
-              <div class="css-xjhrni fw-bold">CONTINUE</div>
+            <button className="btn-place-order">
+              <div className="css-xjhrni fw-bold">CONTINUE</div>
             </button>
             <p className="fs-8 my-4 ">
               Have trouble logging in?{" "}

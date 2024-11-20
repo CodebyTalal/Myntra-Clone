@@ -1,10 +1,17 @@
 import { IoIosSearch } from "react-icons/io";
-import { useDispatch } from "react-redux";
-import { checkAction } from "../store/redux";
+import { useDispatch, useSelector } from "react-redux";
+import { checkAction } from "../../store/redux";
+import { useMemo } from "react";
 
 const Brands = () => {
   const dispatch = useDispatch();
-
+  const items = useSelector((store) => store.items);
+  const category = useSelector((store) => store.categoryItems);
+  let company;
+  useMemo(() => {
+    const { companies } = items[category];
+    company = companies;
+  }, [items, category]);
   const handleCheckbox = (event) => {
     const label = event.target.getAttribute("data-label");
     if (event.target.checked) {
@@ -25,97 +32,100 @@ const Brands = () => {
           <IoIosSearch className="" style={{ height: "21px", width: "21px" }} />
         </span>
       </div>
-      <div class="form-check">
+
+      {company.map((companyname) => (
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            value=""
+            data-label={companyname}
+            onChange={handleCheckbox}
+            id="defaultCheck1"
+          />
+          <label className="form-check-label fs-8" htmlFor="defaultCheck1">
+            {companyname}
+          </label>
+        </div>
+      ))}
+      {/* <div className="form-check">
         <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          data-label="Carlton London"
-          onChange={handleCheckbox}
-          id="defaultCheck1"
-        />
-        <label class="form-check-label fs-8" for="defaultCheck1">
-          Carlton London
-        </label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck2"
           data-label="The Indian Garage Co"
           onChange={handleCheckbox}
         />
-        <label class="form-check-label fs-8" for="defaultCheck2">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck2">
           The Indian Garage Co
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck3"
           data-label="NUEVOSDAMAS"
           onChange={handleCheckbox}
         />
-        <label class="form-check-label fs-8" for="defaultCheck3">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck3">
           NUEVOSDAMAS
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck4"
           data-label="ADIDAS"
           onChange={handleCheckbox}
         />
-        <label class="form-check-label fs-8" for="defaultCheck4">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck4">
           ADIDAS
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck5"
           data-label="Roadster"
           onChange={handleCheckbox}
         />
-        <label class="form-check-label fs-8" for="defaultCheck5">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck5">
           Roadster
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck6"
           data-label="Nike"
           onChange={handleCheckbox}
         />
-        <label class="form-check-label fs-8" for="defaultCheck6">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck6">
           Nike
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck6"
           data-label="Nivea"
           onChange={handleCheckbox}
         />
-        <label class="form-check-label fs-8 " for="defaultCheck6">
+        <label className="form-check-label fs-8 " htmlFor="defaultCheck6">
           Nivea
         </label>
-      </div>
+      </div> */}
 
       <button className="btn">+ 456 more</button>
     </div>

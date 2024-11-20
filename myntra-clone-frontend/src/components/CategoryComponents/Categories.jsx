@@ -12,91 +12,91 @@ const Categories = () => {
           <IoIosSearch className="" style={{ height: "21px", width: "21px" }} />
         </span>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck1"
         />
-        <label class="form-check-label fs-8" for="defaultCheck1">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck1">
           Default checkbox
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck2"
         />
-        <label class="form-check-label fs-8" for="defaultCheck2">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck2">
           Disabled checkbox
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck3"
         />
-        <label class="form-check-label fs-8" for="defaultCheck3">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck3">
           Default checkbox
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck4"
         />
-        <label class="form-check-label fs-8" for="defaultCheck4">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck4">
           Disabled checkbox
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck5"
         />
-        <label class="form-check-label fs-8" for="defaultCheck5">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck5">
           Default checkbox
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck6"
         />
-        <label class="form-check-label fs-8" for="defaultCheck6">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck6">
           Disabled checkbox
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck6"
         />
-        <label class="form-check-label fs-8" for="defaultCheck6">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck6">
           Default checkbox
         </label>
       </div>
-      <div class="form-check">
+      <div className="form-check">
         <input
-          class="form-check-input"
+          className="form-check-input"
           type="checkbox"
           value=""
           id="defaultCheck7"
         />
-        <label class="form-check-label fs-8" for="defaultCheck7">
+        <label className="form-check-label fs-8" htmlFor="defaultCheck7">
           Disabled checkbox
         </label>
       </div>

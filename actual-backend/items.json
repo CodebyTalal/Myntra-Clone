@@ -1,98 +1,429 @@
 {
-  "items": [
-    [
-      {
-        "id": "001",
-        "image": "images/1.jpg",
-        "company": "Carlton London",
-        "item_name": "Rhodium-Plated CZ Floral Studs",
-        "original_price": 1045,
-        "current_price": 606,
-        "discount_percentage": 42,
-        "return_period": 14,
-        "delivery_date": "10 Oct 2023",
-        "rating": { "stars": 4.5, "count": 1400 }
-      },
-      {
-        "id": "002",
-        "image": "images/7.jpg",
-        "company": "The Indian Garage Co",
-        "item_name": "Men Slim Fit Regular Shorts",
-        "original_price": 1599,
-        "current_price": 639,
-        "discount_percentage": 60,
-        "rating": { "stars": 4.2, "count": 388 }
-      },
-      {
-        "id": "003",
-        "image": "images/3.jpg",
-        "company": "NUEVOSDAMAS",
-        "item_name": "Women Red & White Printed A-Line Knee-Length Skirts",
-        "original_price": 1599,
-        "current_price": 495,
-        "discount_percentage": 69,
-        "return_period": 14,
-        "delivery_date": "10 Oct 2023",
-        "rating": { "stars": 4.1, "count": 249 }
-      },
-      {
-        "id": "004",
-        "image": "images/4.jpg",
-        "company": "ADIDAS",
-        "item_name": "Indian Cricket ODI Jersey",
-        "original_price": 999,
-        "current_price": 999,
-        "discount_percentage": 0,
-        "return_period": 14,
-        "delivery_date": "10 Oct 2023",
-        "rating": { "stars": 5, "count": 10 }
-      },
-      {
-        "id": "005",
-        "image": "images/5.jpg",
-        "company": "Roadster",
-        "item_name": "Pure Cotton T-shirt",
-        "original_price": 1399,
-        "current_price": 489,
-        "discount_percentage": 65,
-        "return_period": 14,
-        "delivery_date": "10 Oct 2023",
-        "rating": { "stars": 4.2, "count": 3500 }
-      },
-      {
-        "id": "006",
-        "image": "images/6.jpg",
-        "company": "Nike",
-        "item_name": "Men ReactX Running Shoes",
-        "original_price": 14995,
-        "current_price": 14995,
-        "discount_percentage": 0,
-        "return_period": 14,
-        "delivery_date": "10 Oct 2023",
-        "rating": { "stars": 0, "count": 0 }
-      },
-      {
-        "id": "007",
-        "image": "images/7.jpg",
-        "company": "The Indian Garage Co",
-        "item_name": "Men Slim Fit Regular Shorts",
-        "original_price": 1599,
-        "current_price": 639,
-        "discount_percentage": 60,
-        "rating": { "stars": 4.2, "count": 388 }
-      },
-      {
-        "id": "008",
-        "image": "images/8.jpg",
-        "company": "Nivea",
-        "item_name": "Men Fresh Deodrant 150ml",
-        "original_price": 285,
-        "current_price": 142,
-        "discount_percentage": 50,
-        "return_period": 14,
-        "delivery_date": "10 Oct 2023",
-        "rating": { "stars": 4.2, "count": 5200 }
-      }
-    ]
-  ]
+  "items": {
+    "EthnicWear": {
+      "items": [
+        {
+          "id": "001",
+          "image": "images/ethnic-1.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Red & White Traditional Arab Dress",
+          "original_price": 3045,
+          "current_price": 1770,
+          "discount_percentage": 42,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.5, "count": 1400 }
+        },
+
+        {
+          "id": "002",
+          "image": "images/ethnic-2.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Blue & Golden Traditional Arab Dress",
+          "original_price": 5600,
+          "current_price": 1770,
+          "discount_percentage": 69,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.1, "count": 249 }
+        },
+        {
+          "id": "003",
+          "image": "images/ethnic-3.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women White Traditional Arab Dress",
+          "original_price": 4200,
+          "current_price": 4200,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 5, "count": 10 }
+        },
+        {
+          "id": "004",
+          "image": "images/ethnic-4.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Black & Golden Traditional Arab Dress",
+          "original_price": 5000,
+          "current_price": 1770,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "005",
+          "image": "images/ethnic-5.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Green & Golden Traditional Arab Dress",
+          "original_price": 14995,
+          "current_price": 14995,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 0, "count": 0 }
+        },
+        {
+          "id": "006",
+          "image": "images/ethnic-5.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Green & Golden Traditional Arab Dress",
+          "original_price": 14995,
+          "current_price": 14995,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 0, "count": 0 }
+        },
+        {
+          "id": "008",
+          "image": "images/ethnic-3.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women White Traditional Arab Dress",
+          "original_price": 4200,
+          "current_price": 4200,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 5, "count": 10 }
+        },
+        {
+          "id": "009",
+          "image": "images/ethnic-4.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Black & Golden Traditional Arab Dress",
+          "original_price": 5000,
+          "current_price": 1770,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "010",
+          "image": "images/ethnic-1.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Red & White Traditional Arab Dress",
+          "original_price": 3045,
+          "current_price": 1770,
+          "discount_percentage": 42,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.5, "count": 1400 }
+        },
+        {
+          "id": "007",
+          "image": "images/ethnic-2.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Blue & Golden Traditional Arab Dress",
+          "original_price": 5600,
+          "current_price": 1770,
+          "discount_percentage": 69,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.1, "count": 249 }
+        }
+      ],"companies":["Mezidi Zenab"]
+    },
+    "WFH Casual Wear": {
+      "items": [
+        {
+          "id": "001",
+          "image": "images/casual-1.jpg",
+          "company": "Ali reza zare",
+          "item_name": "Black & White Suit",
+          "original_price": 1045,
+          "current_price": 606,
+          "discount_percentage": 42,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.5, "count": 1400 }
+        },
+        {
+          "id": "002",
+          "image": "images/casual-2.jpg",
+          "company": "Peyman Farmani",
+          "item_name": "Blue & White Dress",
+          "original_price": 999,
+          "current_price": 999,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 5, "count": 10 }
+        },
+        {
+          "id": "003",
+          "image": "images/casual-3.jpg",
+          "company": "Podmatch",
+          "item_name": "Men Slim Fit Shirt",
+          "original_price": 1599,
+          "current_price": 639,
+          "discount_percentage": 60,
+          "rating": { "stars": 4.2, "count": 388 }
+        },
+        {
+          "id": "004",
+          "image": "images/casual-4.jpg",
+          "company": "M Brauer",
+          "item_name": "Men Jacket",
+          "original_price": 1599,
+          "current_price": 639,
+          "discount_percentage": 60,
+          "rating": { "stars": 4.2, "count": 388 }
+        }
+      ],"companies":["Ali reza zare","Podmatch","Peyman Farmani","M Brauer"]
+    },
+    "Mens Activewear": {
+      "items": [
+        {
+          "id": "001",
+          "image": "images/active-1.jpg",
+          "company": "Cottonbro",
+          "item_name": "Black Track Suit",
+          "original_price": 1045,
+          "current_price": 606,
+          "discount_percentage": 42,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.5, "count": 1400 }
+        },
+        {
+          "id": "002",
+          "image": "images/active-2.jpg",
+          "company": "PNW",
+          "item_name": "Brown shirt & Black short pair",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "003",
+          "image": "images/active-3.jpg",
+          "company": "Polina",
+          "item_name": "White pure cotton T-shirt",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "004",
+          "image": "images/active-4.jpg",
+          "company": "Ollivves",
+          "item_name": "Tennis Track suit",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "005",
+          "image": "images/active-4.jpg",
+          "company": "Ollivves",
+          "item_name": "Tennis Track suit",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "006",
+          "image": "images/active-3.jpg",
+          "company": "Polina",
+          "item_name": "White pure cotton T-shirt",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "007",
+          "image": "images/active-2.jpg",
+          "company": "PNW",
+          "item_name": "Brown shirt & Black short pair",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "008",
+          "image": "images/active-1.jpg",
+          "company": "Cottonbro",
+          "item_name": "Black Track Suit",
+          "original_price": 1045,
+          "current_price": 606,
+          "discount_percentage": 42,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.5, "count": 1400 }
+        }
+      ],"companies":["Cottonbro","PNW","Polina","Ollivves"]
+    },
+    "Western Wear": {
+      "items": [
+        {
+          "id": "001",
+          "image": "images/1.jpg",
+          "company": "Carlton London",
+          "item_name": "Rhodium-Plated CZ Floral Studs",
+          "original_price": 1045,
+          "current_price": 606,
+          "discount_percentage": 42,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.5, "count": 1400 }
+        },
+
+        {
+          "id": "003",
+          "image": "images/3.jpg",
+          "company": "NUEVOSDAMAS",
+          "item_name": "Women Red & White Printed A-Line Knee-Length Skirts",
+          "original_price": 1599,
+          "current_price": 495,
+          "discount_percentage": 69,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.1, "count": 249 }
+        },
+        {
+          "id": "004",
+          "image": "images/4.jpg",
+          "company": "ADIDAS",
+          "item_name": "Indian Cricket ODI Jersey",
+          "original_price": 999,
+          "current_price": 999,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 5, "count": 10 }
+        },
+        {
+          "id": "005",
+          "image": "images/5.jpg",
+          "company": "Roadster",
+          "item_name": "Pure Cotton T-shirt",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "006",
+          "image": "images/6.jpg",
+          "company": "Nike",
+          "item_name": "Men ReactX Running Shoes",
+          "original_price": 14995,
+          "current_price": 14995,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 0, "count": 0 }
+        },
+        {
+          "id": "007",
+          "image": "images/7.jpg",
+          "company": "The Indian Garage Co",
+          "item_name": "Men Slim Fit Regular Shorts",
+          "original_price": 1599,
+          "current_price": 639,
+          "discount_percentage": 60,
+          "rating": { "stars": 4.2, "count": 388 }
+        },
+        {
+          "id": "008",
+          "image": "images/8.jpg",
+          "company": "Nivea",
+          "item_name": "Men Fresh Deodrant 150ml",
+          "original_price": 285,
+          "current_price": 142,
+          "discount_percentage": 50,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 5200 }
+        }
+      ],"companies":["Mezidi Zenab"]
+    },
+    "Sportswear": {
+      "items": [
+        {
+          "id": "001",
+          "image": "images/ethnic-1.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Red & White Traditional Arab Dress",
+          "original_price": 1045,
+          "current_price": 606,
+          "discount_percentage": 42,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.5, "count": 1400 }
+        },
+
+        {
+          "id": "002",
+          "image": "images/ethnic-2.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Blue & Golden Traditional Arab Dress",
+          "original_price": 1599,
+          "current_price": 495,
+          "discount_percentage": 69,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.1, "count": 249 }
+        },
+        {
+          "id": "003",
+          "image": "images/ethnic-3.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women White Traditional Arab Dress",
+          "original_price": 999,
+          "current_price": 999,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 5, "count": 10 }
+        },
+        {
+          "id": "004",
+          "image": "images/ethnic-4.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Black & Golden Traditional Arab Dress",
+          "original_price": 1399,
+          "current_price": 489,
+          "discount_percentage": 65,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 4.2, "count": 3500 }
+        },
+        {
+          "id": "005",
+          "image": "images/ethnic-5.jpg",
+          "company": "Mezidi Zineb",
+          "item_name": "Women Green & Golden Traditional Arab Dress",
+          "original_price": 14995,
+          "current_price": 14995,
+          "discount_percentage": 0,
+          "return_period": 14,
+          "delivery_date": "10 Oct 2023",
+          "rating": { "stars": 0, "count": 0 }
+        }
+      ],"companies":["Mezidi Zenab"]
+    }
+  }
 }

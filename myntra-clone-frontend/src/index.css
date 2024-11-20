@@ -220,12 +220,16 @@ margin-top: 2px;
   font-weight: 700;
 }
 
-.category-items, .items-container {
-  height: 425px;
+ .items-container {
+  /* height: 425px; */
   margin: 50px 10%;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-evenly; */
+}
+ .bag-container {
+  margin: 30px 10%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sale_item {
@@ -263,6 +267,7 @@ margin-top: 2px;
   padding: 15px;
 }
 .item-container {
+  height: 372px;
   width: 210px;
   margin: 10px;
   box-sizing: border-box;

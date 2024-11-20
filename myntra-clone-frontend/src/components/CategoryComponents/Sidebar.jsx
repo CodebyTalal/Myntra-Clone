@@ -10,7 +10,7 @@ const Sidebar = () => {
       <SidebarHeader />
       <hr className="my-0" />
       <div className="position-sticky pe-0" style={{ width: "250px" }}>
-        <div class="d-flex flex-column flex-shrink-0 border border-bottom-0 border-start-0 border-top-0">
+        <div className="d-flex flex-column flex-shrink-0 border border-bottom-0 border-start-0 border-top-0">
           <Radios />
           <hr />
           <Brands />

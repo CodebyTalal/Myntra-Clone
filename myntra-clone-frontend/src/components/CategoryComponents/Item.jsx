@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { CiHeart } from "react-icons/ci";
-import { wishlistAction } from "../store/redux";
+import { wishlistAction } from "../../store/redux";
 import { useState } from "react";
 const Item = ({ item }) => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const Item = ({ item }) => {
       <div className="p-3 pb-2 bg-lighter position-absolute start-0">
         <button
           type="button"
-          class="align-bottom wishlist_btn fs-7 fw-bolder"
+          className="align-bottom wishlist_btn fs-7 fw-bolder"
           onClick={handleAddItem}
         >
           <CiHeart

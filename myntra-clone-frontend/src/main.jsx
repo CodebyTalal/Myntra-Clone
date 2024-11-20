@@ -1,15 +1,24 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import Bag from "./components/Bag.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Bag from "./components/BagComponents/Bag.jsx";
+import {
+  createBrowserRouter,
+  createMemoryRouter,
+  RouterProvider,
+} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+// import "./output.css";
 import { Provider } from "react-redux";
-import ItemsStore from "./store/redux.js";
-import Wishlist from "./components/Wishlist.jsx";
+import { ItemsStore, persistor } from "./store/redux.js";
+import Wishlist from "./components/WishlistComponents/Wishlist.jsx";
 import LoginPage from "./components/LoginPage.jsx";
-import CategoryItems from "./components/CategoryItems.jsx";
-import HomePage from "./components/HomePage.jsx";
+import CategoryItems from "./components/CategoryComponents/CategoryItems.jsx";
+import HomePage from "./components/CategoryComponents/HomePage.jsx";
+import { PersistGate } from "redux-persist/integration/react";
+import Spinner from "./components/CategoryComponents/Spinner.jsx";
+import ResetAllState from "./components/ResetAllState.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +36,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/categoryitem",
-        element: <CategoryItems />,
+        element: <CategoryItems key={location.pathname} />,
+      },
+      {
+        path: "/ResetAllState",
+        element: <ResetAllState />,
       },
     ],
   },
@@ -40,7 +53,9 @@ export const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={ItemsStore}>
-      <RouterProvider router={router} />
+      <PersistGate loading={<Spinner />} persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
     </Provider>
   </StrictMode>
 );

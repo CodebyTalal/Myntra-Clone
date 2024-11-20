@@ -1,26 +1,26 @@
 import { useSelector } from "react-redux";
-import BagSummary from "./Bag_Summary";
 import BagItem from "./BagItem";
 import BagEmptyMessage from "./BagEmptyMessage";
+import BagSummary from "./Bag_Summary";
 
 const Bag = () => {
   const Bag = useSelector((store) => store.bag);
   const summaryData = useSelector((store) => store.summary);
 
   return (
-    <main className="mt-5 pt-5">
+    <main className="mt-3 py-5 ">
       {Bag.length === 0 ? (
         <BagEmptyMessage />
       ) : (
-        <div class="items-container py-5">
-          <div class="bag-items-container">
+        <div className="bag-container">
+          <div className="bag-items-container">
             {Bag.map((item) => (
               <BagItem key={item.id} item={item}></BagItem>
             ))}
           </div>
 
           {Bag.length > 0 && (
-            <div class="bag-summary">
+            <div className="bag-summary">
               <BagSummary
                 totalItem={Bag.length}
                 totalMRP={summaryData.totalMRP}
