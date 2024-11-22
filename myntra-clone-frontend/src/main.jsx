@@ -2,14 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import Bag from "./components/BagComponents/Bag.jsx";
-import {
-  createBrowserRouter,
-  createMemoryRouter,
-  RouterProvider,
-} from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
-// import "./output.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { ItemsStore, persistor } from "./store/redux.js";
 import Wishlist from "./components/WishlistComponents/Wishlist.jsx";
@@ -19,6 +12,8 @@ import HomePage from "./components/CategoryComponents/HomePage.jsx";
 import { PersistGate } from "redux-persist/integration/react";
 import Spinner from "./components/CategoryComponents/Spinner.jsx";
 import ResetAllState from "./components/ResetAllState.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 export const router = createBrowserRouter([
   {

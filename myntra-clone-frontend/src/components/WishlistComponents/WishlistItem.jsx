@@ -3,12 +3,6 @@ import { BagAction, summaryAction, wishlistAction } from "../../store/redux";
 import { IoClose } from "react-icons/io5";
 
 const WishlistItem = ({ item }) => {
-  // const bagitems = useSelector((store) => store.bag);
-  // const check = bagitems.forEach((i) => {
-  //   return true && i.id === item.id;
-  // });
-  // console.log(check);
-
   const dispatch = useDispatch();
   const handleAddtoBag = () => {
     dispatch(BagAction.addToBag(item));

@@ -36,7 +36,7 @@ const Header = () => {
         </span>
         <input
           className="search_input"
-          placeholder="Search htmlFor products, brands and more"
+          placeholder="Search for products, brands and more"
         />
       </div>
       <div className="action_bar">

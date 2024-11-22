@@ -127,6 +127,7 @@ const fetchStatusSlice = createSlice({
     fetchFinished: (state) => {
       state.currentlyFetching = false;
     },
+    resetItems:()=>[]
   },
 });
 
@@ -169,7 +170,7 @@ const persistConfig = {
   key: "root",
   storage,
   // whitelist: ["bag", "wishlist", "items", "itemsdata", "categoryItems", "fetchStatus", "discount", "filteredItems","hover", "check"], // Specify which slices to persist
-  blacklist: [ "filteredItems","check","discount"],
+  blacklist: [ "items","filteredItems","check","discount","fetchStatus"],
 };
 
 // Persisted Reducer

@@ -3,15 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { checkAction } from "../../store/redux";
 import { useMemo } from "react";
 
-const Brands = () => {
+const Brands = ({ companies }) => {
   const dispatch = useDispatch();
-  const items = useSelector((store) => store.items);
-  const category = useSelector((store) => store.categoryItems);
-  let company;
-  useMemo(() => {
-    const { companies } = items[category];
-    company = companies;
-  }, [items, category]);
+
   const handleCheckbox = (event) => {
     const label = event.target.getAttribute("data-label");
     if (event.target.checked) {
@@ -33,18 +27,18 @@ const Brands = () => {
         </span>
       </div>
 
-      {company.map((companyname) => (
+      {companies.map((company) => (
         <div className="form-check">
           <input
             className="form-check-input"
             type="checkbox"
             value=""
-            data-label={companyname}
+            data-label={company}
             onChange={handleCheckbox}
             id="defaultCheck1"
           />
           <label className="form-check-label fs-8" htmlFor="defaultCheck1">
-            {companyname}
+            {company}
           </label>
         </div>
       ))}

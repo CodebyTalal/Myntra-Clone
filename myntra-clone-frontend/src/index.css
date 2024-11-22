@@ -21,6 +21,11 @@ header {
   height: 45px;
  
 }
+
+.h-40{
+  height: 40%;
+}
+
 .rating{
   bottom:100px;
   border-radius: 3px;

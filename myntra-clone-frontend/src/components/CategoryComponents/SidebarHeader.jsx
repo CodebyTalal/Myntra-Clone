@@ -1,9 +1,8 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const SidebarHeader = () => {
+const SidebarHeader = ({ items }) => {
   const Category = useSelector((store) => store.categoryItems);
-  const items = useSelector((store) => store.itemsdata);
   return (
     <div className="p-4 pb-0">
       {" "}

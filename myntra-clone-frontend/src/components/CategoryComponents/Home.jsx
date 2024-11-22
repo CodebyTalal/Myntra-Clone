@@ -8,28 +8,17 @@ import {
 } from "../../store/redux";
 import EmptyFilterItems from "./EmptyFilterItems";
 
-const Home = () => {
-  let [newFilteredItems, setFilteredItems] = useState([]);
+const Home = ({ items }) => {
   const dispatch = useDispatch();
-  const items = useSelector((store) => store.itemsdata);
   const check = useSelector((store) => store.check);
-  // const filteredItems = useSelector((store) => store.filteredItems);
-  // console.log(filteredItems);
   const discount = useSelector((store) => store.discount);
-  const FetchStatus = useSelector((store) => store.fetchStatus);
+  useEffect(() => {
+    dispatch(checkAction.resetItems()); // Reset wishlist slice
+    dispatch(discountAction.resetItems());
+  }, []);
+  console.log(discount);
 
-  // Reset states when the component mounts
-  // dispatch(checkAction.setCheck([]));
-  // dispatch(discountAction.setDiscount(0));
-  // useEffect(() => {
-  //   dispatch(filteredItemsAction.setFilteredItems([]));
-  //   dispatch(checkAction.setCheck([]));
-  //   dispatch(discountAction.setDiscount(0));
-  //   console.log("Redux state reset on mount");
-  // }, [location.pathname]);
-
-  console.log(newFilteredItems);
-  newFilteredItems = useMemo(
+  const newFilteredItems = useMemo(
     () =>
       items.filter(
         (item) =>
@@ -38,10 +27,6 @@ const Home = () => {
       ),
     [items, check, discount]
   );
-
-  // useEffect(() => {
-  //   dispatch(filteredItemsAction.setFilteredItems(newFilteredItems));
-  // }, [newFilteredItems, dispatch]);
 
   return (
     <div className="items-container justify-content-center w-80 mx-0 px-0 mt-0">

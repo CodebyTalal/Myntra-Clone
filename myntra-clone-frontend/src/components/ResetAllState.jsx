@@ -18,11 +18,7 @@ const ResetAllState = () => {
 
     // Step 2: Reset Redux slices
     dispatch(summaryAction.resetItems()); // Reset wishlist slice
-    dispatch(itemsdataAction.resetItems()); // Reset wishlist slice
-    // dispatch(itemsAction.resetItems()); // Reset wishlist slice
-    dispatch(filteredItemsAction.resetItems()); // Reset wishlist slice
-    dispatch(checkAction.resetItems()); // Reset wishlist slice
-    dispatch(discountAction.resetItems()); // Reset wishlist slice
+    // Reset wishlist slice
     // Repeat for other slices as needed
     console.log("cleared");
   };
